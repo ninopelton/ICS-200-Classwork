@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(100, 63, 63);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    background: white;
+    width: 350px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.card-image {
+    height: 500px;
+    background-position: center;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.pic-1 {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg);
+}
+
+
+.pic-2 {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Dark_Souls_II_cover.jpg/220px-Dark_Souls_II_cover.jpg);
+}
+
+
+.pic-3 {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/b/bb/Dark_souls_3_cover_art.jpg);
+}
+
+.card h2 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+}
+
+.card:hover {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
