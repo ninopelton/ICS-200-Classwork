@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>WebXR Page with A-Frame</title>
-    <meta name="description" content="WebXR Page with A-Frame">
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° View</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        #panorama {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            transform-origin: 50% 50%;
+            transform-style: preserve-3d;
+            transition: transform 0.2s ease;
+        }
+    </style>
 </head>
 <body>
-    <a-scene>
-        <a-assets>
-            <img id="360-image" src="Venice.Still001.jpeg">
-        </a-assets>
-        <a-sky src="#360-image"></a-sky>
-        <a-entity position="0 1.8 0">
-            <a-text value="Welcome to Venice!" align="center" width="7"></a-text>
-        </a-entity>
-    </a-scene>
+    <img id="panorama" src="Venice.Still001.jpeg" alt="360° Panorama">
+    
+    <script>
+        const panorama = document.getElementById('panorama');
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+            
+            updatePanorama();
+        });
+        
+        function updatePanorama() {
+            const rotationY = mouseX * 90; // Adjust sensitivity here
+            const rotationX = mouseY * 45; // Adjust sensitivity here
+            
+            panorama.style.transform = `rotateY(${rotationY}deg) rotateX(${rotationX}deg)`;
+        }
+    </script>
 </body>
 </html>
