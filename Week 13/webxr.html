@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>WebXR Page with A-Frame</title>
     <meta name="description" content="WebXR Page with A-Frame">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 </head>
 <body>
     <a-scene>
         <a-assets>
-            <img id="360-image"  src="Venice.Still001.jpeg">
+            <!-- Load your 360° image -->
+            <img id="360-image" src="Venice.Still001.jpeg">
         </a-assets>
+        <!-- Set the 360° image as the source for the sky -->
         <a-sky src="#360-image"></a-sky>
+        <!-- Add other entities -->
         <a-entity position="0 1.8 0">
             <a-text value="Welcome to Venice!" align="center" width="7"></a-text>
         </a-entity>
