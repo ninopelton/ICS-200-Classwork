@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <title>360&deg; Image</title>
     <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="aframe.min.js"></script></head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
 <body>
-<a-scene>
-    <a-sky src="360-degree-view-of-modern-buildings-wenjie-dong.jpg" rotation="0 -130 0"></a-sky>
-</a-scene>
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="Venice.Still001.jpeg">
+        </a-assets>
+        <a-sky src="#sky"></a-sky>
+    </a-scene>
 </body>
 </html>
