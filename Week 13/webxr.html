@@ -1,43 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Street View</title>
-    <!-- Include the Photo Sphere Viewer CSS -->
-    <link rel="stylesheet" href="path/to/photo-sphere-viewer.min.css">
-    <style>
-        /* Style the viewer container */
-        #viewer-container {
-            width: 100%;
-            height: 100vh; /* Adjust to desired height */
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>WebXR Page with A-Frame</title>
+    <meta name="description" content="WebXR Page with A-Frame">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
-    <!-- Container for the viewer -->
-    <div id="viewer-container"></div>
-
-    <!-- Include the Photo Sphere Viewer library -->
-    <script src="path/to/three.min.js"></script>
-    <script src="path/to/D.js"></script>
-    <script src="path/to/uevent.js"></script>
-    <script src="path/to/doT.min.js"></script>
-    <script src="path/to/photo-sphere-viewer.min.js"></script>
-
-    <script>
-        // Create the viewer
-        var viewer = new PhotoSphereViewer.Viewer({
-            container: 'viewer-container',
-            panorama: 'path/to/your/panoramic/image.jpg', // Path to your panoramic image
-            navbar: false, // Disable the navbar
-            time_anim: false, // Disable animation
-            mousewheel: false, // Disable mousewheel navigation
-            size: {
-                width: '100%',
-                height: '100vh'
-            }
-        });
-    </script>
+    <a-scene>
+        <a-assets>
+            <img id="360-image" src="Venice.Still001.jpeg">
+        </a-assets>
+        <a-sky src="#360-image"></a-sky>
+        <a-entity position="0 1.8 0">
+            <a-text value="Welcome to Venice!" align="center" width="7"></a-text>
+        </a-entity>
+    </a-scene>
 </body>
 </html>
