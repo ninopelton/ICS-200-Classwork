@@ -2,16 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>360&deg; Image</title>
-    <meta name="description" content="360&deg; Image - A-Frame">
+    <title>WebXR Page with A-Frame</title>
+    <meta name="description" content="WebXR Page with A-Frame">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
     <a-scene>
         <a-assets>
-            <img id="sky" src="Venice.Still001.jpeg">
+            <img id="360-image" src="Venice.Still001.jpeg">
         </a-assets>
-        <a-sky src="#sky"></a-sky>
+        <a-sky src="#360-image" rotation="0 -130 0"></a-sky>
+        <a-entity position="0 1.8 0">
+            <a-text value="Welcome to Venice!" align="center" width="7"></a-text>
+        </a-entity>
     </a-scene>
 </body>
 </html>
