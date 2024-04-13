@@ -3,46 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360° View</title>
+    <title>Google Street View</title>
+    <!-- Include the Photo Sphere Viewer CSS -->
+    <link rel="stylesheet" href="path/to/photo-sphere-viewer.min.css">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100%;
-        }
-        
-        #panorama {
+        /* Style the viewer container */
+        #viewer-container {
             width: 100%;
-            height: 100%;
-            position: fixed;
-            transform-origin: 50% 50%;
-            transform-style: preserve-3d;
-            transition: transform 0.2s ease;
+            height: 100vh; /* Adjust to desired height */
         }
     </style>
 </head>
 <body>
-    <img id="panorama" src="Venice.Still001.jpeg" alt="360° Panorama">
-    
+    <!-- Container for the viewer -->
+    <div id="viewer-container"></div>
+
+    <!-- Include the Photo Sphere Viewer library -->
+    <script src="path/to/three.min.js"></script>
+    <script src="path/to/D.js"></script>
+    <script src="path/to/uevent.js"></script>
+    <script src="path/to/doT.min.js"></script>
+    <script src="path/to/photo-sphere-viewer.min.js"></script>
+
     <script>
-        const panorama = document.getElementById('panorama');
-        let mouseX = 0;
-        let mouseY = 0;
-        
-        document.addEventListener('mousemove', (event) => {
-            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-            mouseY = (event.clientY / window.innerHeight) * 2 - 1;
-            
-            updatePanorama();
+        // Create the viewer
+        var viewer = new PhotoSphereViewer.Viewer({
+            container: 'viewer-container',
+            panorama: 'path/to/your/panoramic/image.jpg', // Path to your panoramic image
+            navbar: false, // Disable the navbar
+            time_anim: false, // Disable animation
+            mousewheel: false, // Disable mousewheel navigation
+            size: {
+                width: '100%',
+                height: '100vh'
+            }
         });
-        
-        function updatePanorama() {
-            const rotationY = mouseX * 90; // Adjust sensitivity here
-            const rotationX = mouseY * 45; // Adjust sensitivity here
-            
-            panorama.style.transform = `rotateY(${rotationY}deg) rotateX(${rotationX}deg)`;
-        }
     </script>
 </body>
 </html>
