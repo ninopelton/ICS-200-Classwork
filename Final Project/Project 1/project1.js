@@ -54,24 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const clickedOperator = clickedButton.textContent;
             if (operator !== "") {
                 calculate();
-                // Remove glow effect from previously selected operator
-                const previousOperator = calculator.querySelector(".glow");
-                previousOperator.classList.remove("glow");
             }
             operator = clickedOperator;
             previousInput = currentInput;
             currentInput = "0";
-            // Add glow effect to selected operator
-            clickedButton.classList.add("glow");
         } else if (clickedButton.classList.contains("equals")) {
             calculate();
         } else if (clickedButton.classList.contains("ac")) {
             clear();
-            // Remove glow effect from all operator buttons
-            const operatorButtons = calculator.querySelectorAll(".orange-bg");
-            operatorButtons.forEach(button => {
-                button.classList.remove("glow");
-            });
         }
     });
 
