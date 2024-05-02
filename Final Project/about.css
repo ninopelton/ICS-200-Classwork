@@ -1,0 +1,70 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styles */
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Contact information styles */
+#contact p {
+    margin: 5px 0;
+}
+
+#contact p:first-child {
+    margin-top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
