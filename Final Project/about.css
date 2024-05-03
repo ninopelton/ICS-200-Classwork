@@ -52,15 +52,6 @@ li {
     margin-bottom: 5px;
 }
 
-/* Picture styles */
-#bio img {
-    max-width: 100%; /* Ensures the image fits within its container */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 50%; /* Makes the image round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
-    margin-bottom: 30px; /* Space below the image */
-}
-
 /* Contact information styles */
 #contact p {
     margin: 10px 0; /* Space around contact information */
