@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #343a40; /* Dark gray header background */
+    color: #fff; /* White text */
     padding: 20px;
     text-align: center;
 }
@@ -17,37 +18,56 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Increased margin for better separation between sections */
+    background-color: #fff; /* White section background */
+    padding: 30px; /* Increased padding for better content spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #343a40; /* Dark gray footer background */
+    color: #fff; /* White text */
     padding: 20px;
     text-align: center;
 }
 
 /* Section styles */
 h2 {
-    color: #333;
+    color: #343a40; /* Dark gray heading text */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+p {
+    margin-bottom: 15px; /* Space below paragraphs */
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 20px; /* Space below lists */
 }
 
 li {
     margin-bottom: 5px;
 }
 
+/* Picture styles */
+#bio img {
+    max-width: 100%; /* Ensures the image fits within its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    margin-bottom: 30px; /* Space below the image */
+}
+
 /* Contact information styles */
 #contact p {
-    margin: 5px 0;
+    margin: 10px 0; /* Space around contact information */
 }
 
 #contact p:first-child {
-    margin-top: 0;
+    margin-top: 0; /* Remove top margin for the first paragraph */
 }
 
 /* Responsive styles */
@@ -61,22 +81,10 @@ li {
     }
 
     section {
-        margin-bottom: 10px;
+        padding: 20px; /* Adjusted padding for smaller screens */
     }
 
     footer {
         font-size: 14px;
     }
-}
-
-.bio img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-img {
-    width: 100%;
-    height: auto; 
 }
