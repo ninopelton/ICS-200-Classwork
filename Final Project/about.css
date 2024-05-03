@@ -68,3 +68,8 @@ li {
         font-size: 14px;
     }
 }
+
+#bio img {
+    max-width: 300px;
+    height: auto; 
+}
